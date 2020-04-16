@@ -5,3 +5,19 @@ var mysql = require('mysql');
 // and to the database "chat".
 
 
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'student',
+  password: 'student'
+})
+
+connection.connect(err => {
+  if (err) throw err;
+
+  connection.query('use chatterbox;', (err, results) => {
+    if (err) throw err;
+    console.log('Successfully connected to chatterbox DB');
+  })
+});
+
+exports.connection = connection;

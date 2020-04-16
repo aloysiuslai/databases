@@ -1,5 +1,6 @@
 var express = require('express');
 var db = require('./db');
+var models = require('./models')
 
 // Middleware
 var morgan = require('morgan');
@@ -23,6 +24,29 @@ app.use('/classes', router);
 
 // Serve the client files
 app.use(express.static(__dirname + '/../client'));
+
+// app.get('/users', (req,res) => {
+
+// });
+
+// app.get('/messages', (req,res) => {
+
+// });
+
+// app.post('/users', (req,res) => {
+//   //call controller function with req.json.username, it returns a promise
+//   //.then((promise) => { res <- w.e data & return res })
+
+//   //.then(() => {})
+//   //.then(results => res.results)
+
+//   //.then(results => res.results)
+// });
+
+// app.post('/messages', (req,res) => {
+//   //invoke messages controller with message object
+//   //.then(return data) return message back?
+// });
 
 // If we are being run directly, run the server.
 if (!module.parent) {

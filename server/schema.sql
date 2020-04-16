@@ -8,7 +8,8 @@ CREATE TABLE messages (
 
 /* Create other tables and define schemas for them here! */
 
-
+/* Refer to Batch.bat file
+*/
 
 
 /*  Execute this file from the command line by typing:
